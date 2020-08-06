@@ -2,4 +2,4 @@
 git pull
 git add -A
 git commit -m "upload.sh $(date)"
-git push origin master
+git push origin master && notify-send "Sucess"
