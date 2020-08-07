@@ -81,7 +81,7 @@ ul {
 }
 
 .site {
-    width: 80%;
+    /* width: 80%; */
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -120,8 +120,8 @@ ul {
 
 .content {
     margin: 0 30px;
-    min-width: 500px;
-    max-width: 800px;
+    /* min-width: 500px; */
+    /* max-width: 800px; */
 }
 
 .card {
@@ -166,7 +166,11 @@ footer {
     color: var(--primary);
 }
 
-#footer-links-p { display: inline; }
+#footer-links-p { 
+  display: inline; 
+  margin-left: 7px;
+}
+
 .footer-content > * {
   display: inline-block;
   margin-right: 50px;
