@@ -6,4 +6,4 @@ git commit -m \"upload.sh $(date)\"
 git push origin master
 echo -e \"\nappuie sur une touche pour quitter\"
 read
-" && notify-send "Sucess"
+"
