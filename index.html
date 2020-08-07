@@ -3,43 +3,64 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css"> 
-    <title>la CGT Cosmeva</title>
+    <title>La CGT Cosmeva</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="static/img/favicon.png">
   </head>
   <body>
-    <h1 style="zoom: 150%">la CGT Cosmeva</h1>
-    <h3><u>Extraits de l'article 1 des statuts :</u></br>
-      "Le syndicat CGT-Cosmeva a pour (...) but l'organisation des salariés du site de Cosmeva en vue de défendre leurs intérêts et d'obtenir entre autres : l'augmentation réelles des salaires, la réduction du temps de travail, l'amélioration des conditions de travail et de vie.(...)"
-    </h3>
-
-    <div>
-      <h1>    
-        <a target="_blank" href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/master/documents/statuts">statuts</a><br>
-        <a target="_blank" href="">historique</a><br>
-        <a target="_blank" href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/master/documents/comptes">comptes</a><br>
-        <a target="_blank" href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/master/documents/tracts">tracts et affichages</a><br>
-        <a target="_blank" href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/master/documents/juridique">juridique</a><br>
-      </h1>
-    </div>
-
-    <div>
-      <h3>
-        <u>liens utiles :</u><br>
-        <a href=https://www.fnic-cgt.fr>fnic-cgt.fr</a><br>
-        <a href=http://cgt77.fr>cgt77.fr</a><br>
-        <a href=https://www.legifrance.gouv.fr>www.legifrance.gouv.fr</a><br>
-        <a href=https://travail-emploi.gouv.fr style="display: inline-block">travail-emploi.gouv.fr</a> (en particulier le chapitre "droit du travail")
-      </h3>
-    </div>
-
+    <header class="topbar">
+      <a class="topbar-head" href="index.html">
+        <div class="topbar-head">
+          <img src="static/img/logo.svg" alt="logo de la cgt" class="topbar-logo">
+          <h1 class="topbar-title">La CGT Cosmeva</h1>
+        </div>
+      </a>
+    </header>
+    <main class="site">
+      <main class="content">
+        <article class="card">
+          <h2 class="card-title">Extrait de l'article 1 des statuts</h2>
+          <p class="card-text">
+          "Le syndicat CGT-Cosmeva a pour (...) but l'organisation des salariés du site de Cosmeva en vue de défendre leurs intérêts et d'obtenir entre autres : l'augmentation réelles des salaires, la réduction du temps de travail, l'amélioration des conditions de travail et de vie.(...)"
+          </p>
+        </article>
+        <article class="card">
+          <ul class="list-content"><h3>statuts</h3></ul>
+        </article>
+        <article class="card">
+          <ul class="list-content"><h3>historique</h3></ul>
+        </article>
+        <article class="card">
+          <ul class="list-content"><h3>comptes</h3></ul>
+        </article>
+        <article class="card">
+          <ul class="list-content"><h3>tracts</h3></ul>
+        </article>
+        <article class="card">
+          <ul class="list-content"><h3>juridique</h3></ul>
+        </article>
+      </main>
+    </main>
     <footer>
-      <br>
-      <br> 
-      <ul>
-        <h4><u>adresse mail</u> :<a href=mailto:cgtcosmeva@gmail.com> cgtcosmeva@gmail.com</a></h4>
-        <li><h5><u>Sécretaire</u> : Hugues Gillard</h5></li>
-        <li><h5><u>Trésorière</u> : Ariane Kauffman</h5></li>
-      </ul>
+      <div>
+        <div class="footer-title">Liens utiles</div>
+        <ul class="footer-content">
+          <li class="footer-li"><a href=https://www.fnic-cgt.fr>fnic-cgt.fr</a></li>
+          <li class="footer-li"><a href=http://cgt77.fr>cgt77.fr</a></li>
+          <li class="footer-li"><a href=https://www.legifrance.gouv.fr>www.legifrance.gouv.fr</a></li>
+          <li id="footer-links-last"><a href=https://travail-emploi.gouv.fr>travail-emploi.gouv.fr</a><p id="footer-links-p">(en particulier le chapitre "droit du travail")</p></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Contact</div>
+        <ul class="footer-content">
+          <li class="footer-li"><a class="footer-content" href="mailto:cgtcosmeva@gmail.com" title="cliquez pour envoyer un mail">cgtcosmeva@gmail.com</a></li>
+          <li class="footer-li"><u>Secrétaire</u> : Hugues Gillard</li>
+          <li class="footer-li"><u>Trésorière</u> : Ariane Kauffman</li>
+        </ul>
+      </div>
     </footer>
+    <script src="static/js/script.js"></script>
   </body>
 </html>
