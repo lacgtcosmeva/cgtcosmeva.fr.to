@@ -4,20 +4,29 @@ let file_url = 'https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/raw/maste
 xhr.open("GET", list_url)
 xhr.responseType = 'json';
 xhr.send()
-function list_file(regex, classname) {
-  for (let file=0; file<xhr.response.tree.length; file++) {
-    if (RegExp(regex).test(xhr.response.tree[file].path)) {
-      console.log("match : "+xhr.response.tree[file].path)
-    let link_shown = xhr.response.tree[file].path
-    let link_href = link_shown.replace(/ /g, "%20")
-    document.getElementsByClassName("list "+classname).innerHTML += `<li><a id="href-list" href=${file_url}${link_href}>${link_shown}</a></li>`
-    }
-    else {
-      console.log("don't match : "+xhr.response.tree[file].path)
-    }
-  };
-}
+xhr.onload = function() {
+  ul_list_file("statuts")
+  ul_list_file("comptes")
+  ul_list_file("tracts")
+  ul_list_file("brochures")
+};
 
-function clearid(elementid) {
-  document.getElementById(elementid).innerHTML = ""
+xhr.onerror = function() {
+  alert("Network Error");
+  ul_list_file("statuts")
+  ul_list_file("comptes")
+  ul_list_file("tracts")
+  ul_list_file("brochures")
+};
+
+function ul_list_file(classname) {
+  for (let file=0; file<xhr.response.tree.length; file++) {
+    if (RegExp("^documents/"+classname+"/").test(xhr.response.tree[file].path)) {
+      console.log("match : "+xhr.response.tree[file].path)
+      // let link_shown = xhr.response.tree[file].path
+      let link_shown = xhr.response.tree[file].path.replace("^documents/"+classname+"/", "")
+      let link_href = link_shown.replace(/ /g, "%20")
+      document.getElementsByClassName(classname)[0].innerHTML += `<li><a href=${file_url}${link_href}>${link_shown}</a></li>`
+    }
+  }
 }

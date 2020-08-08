@@ -150,11 +150,6 @@ ul {
   text-align: justify;
 }
 
-.file {
-  overflow: auto;
-  /* margin: auto; */
-}
-
 .links-title {
   display: inline-block;
   margin-right: 50px;
@@ -163,17 +158,14 @@ ul {
 
 .list-content {
   display: inline-block;
-  float: right;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-right: 10px;
   width: 80%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  max-height: 150px;
+  overflow-y: auto;
+  overflow-x: auto;
 
-}
-
-.list-content > li {
 }
 
 footer {
@@ -190,7 +182,7 @@ footer {
 }
 
 footer > div {
-margin: auto;
+  margin: auto;
 }
 
 .footer-title {
