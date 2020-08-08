@@ -1,5 +1,6 @@
 #!/bin/bash
 konsole -e bash -c "
+for file in documents/*/*; do mv "$file" "$(echo $file | sed 's/é/e/g')"; done
 git pull
 git add -A
 git commit -m \"upload.sh $(date)\"
