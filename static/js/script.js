@@ -13,8 +13,8 @@ xhr.onload = function() {
 };
 
 xhr.onerror = function() {
-  alert("Network Error");
   document.getElementById("file-loading").innerHTML = '<a href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/master/documents"><br>Network Error. clicker ici pour voir les fichiers</a>'
+  alert("Network Error");
   ul_list_file("statuts")
   ul_list_file("comptes")
   ul_list_file("tracts")
