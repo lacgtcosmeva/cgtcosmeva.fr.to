@@ -184,6 +184,7 @@ footer {
   /* padding: 5px; */
   /* position: fixed; */
   bottom: 0;
+  margin-bottom: 10px;
 }
 
 footer > div {
@@ -210,8 +211,8 @@ footer > div {
 
 #footer-links-middle {
   display: inline-block;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin-right: 60px;
+  margin-left: 60px;
   /* margin-bottom: 10px; */
 }
 
