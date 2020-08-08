@@ -5,6 +5,7 @@ xhr.open("GET", list_url)
 xhr.responseType = 'json';
 xhr.send()
 xhr.onload = function() {
+  document.getElementById("file-loading").innerHTML = ""
   ul_list_file("statuts")
   ul_list_file("comptes")
   ul_list_file("tracts")
@@ -13,6 +14,7 @@ xhr.onload = function() {
 
 xhr.onerror = function() {
   alert("Network Error");
+  document.getElementById("file-loading").innerHTML = '<a href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/master/documents"><br>Network Error. clicker ici pour voir les fichiers</a>'
   ul_list_file("statuts")
   ul_list_file("comptes")
   ul_list_file("tracts")
@@ -21,9 +23,9 @@ xhr.onerror = function() {
 
 xhr.onprogress = function(event) {
   if (event.lengthComputable) {
-    document.getElementById(file-loading).textContent = `Chargement des fichiers... ${event.loaded} of ${event.total} bytes`
+    document.getElementById("file-loading").textContent = `Chargement des fichiers... ${event.loaded} sur ${event.total} bytes`
   } else {
-    document.getElementById(file-loading).textContent = `Chargement des fichiers... ${event.loaded}`
+    document.getElementById("file-loading").textContent = `Chargement des fichiers... ${event.loaded} bytes`
   }
 
 };
