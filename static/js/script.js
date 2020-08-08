@@ -24,8 +24,9 @@ function ul_list_file(classname) {
     if (RegExp("^documents/"+classname+"/").test(xhr.response.tree[file].path)) {
       console.log("match : "+xhr.response.tree[file].path)
       // let link_shown = xhr.response.tree[file].path
-      let link_shown = xhr.response.tree[file].path.replace("documents/"+classname+"/", "")
+      let link_shown = xhr.response.tree[file].path
       let link_href = link_shown.replace(/ /g, "%20")
+      link_shown = link_shown.replace("documents/"+classname+"/", "")
       document.getElementsByClassName(classname)[0].innerHTML += `<li><a href=${file_url}${link_href}>${link_shown}</a></li>`
     }
   }
