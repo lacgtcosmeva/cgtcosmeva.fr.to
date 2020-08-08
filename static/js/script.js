@@ -19,6 +19,15 @@ xhr.onerror = function() {
   ul_list_file("brochures")
 };
 
+xhr.onprogress = function(event) {
+  if (event.lengthComputable) {
+    document.getElementById(file-loading).textContent = `Chargement des fichiers... ${event.loaded} of ${event.total} bytes`
+  } else {
+    document.getElementById(file-loading).textContent = `Chargement des fichiers... ${event.loaded}`
+  }
+
+};
+
 function ul_list_file(classname) {
   for (let file=0; file<xhr.response.tree.length; file++) {
     if (RegExp("^documents/"+classname+"/").test(xhr.response.tree[file].path)) {
