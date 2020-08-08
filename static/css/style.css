@@ -261,9 +261,9 @@ footer > div {
 }
 
 @media only screen and (max-width: 436px) {
-  /* .topbar-logo { */
-    /* display: none; */
-  /* } */
+  .topbar-logo {
+    display: none;
+  }
   .topbar {
     flex-direction: column;
     align-items: center;
