@@ -15,4 +15,4 @@ jobs:
           git config --global user.email 'mirsella@users.noreply.github.com'
           git commit -am "Automated report"
           git remote add clone https://github.com/mirsella/lacgtcosmeva.github.io
-          git push
+          git push clone master
