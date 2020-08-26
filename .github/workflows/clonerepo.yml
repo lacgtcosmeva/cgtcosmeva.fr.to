@@ -10,9 +10,9 @@ jobs:
       - name: push to mirsella
         run: |
           git config --global user.name 'mirsella'
-          git config --global user.email 'mirsella@users.noreply.github.com'
+          git config --global user.email 'mirsella@protonmail.com'
+          git remote add clone https://github.com/mirsella/lacgtcosmeva
           git fetch --unshallow origin
-          # git add -A
-          # git commit -am "Automated report"
-          git remote add clone https://github.com/mirsella/lacgtcosmeva.github.io
+          git rm -rf .github
+          git commit -am "removed .github"
           git push --all -f clone
