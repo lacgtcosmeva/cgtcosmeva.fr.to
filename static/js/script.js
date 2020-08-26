@@ -1,5 +1,5 @@
-let api_url = 'https://api.github.com/repos/lacgtcosmeva/lacgtcosmeva.github.io/git/trees/master?recursive=1'
-let file_url = 'https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/raw/master/'
+let api_url = 'https://api.github.com/repos/lacgtcosmeva/lacgtcosmeva.github.io/git/trees/main?recursive=1'
+let file_url = 'https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/raw/main/'
 fetch(api_url).then(response =>  {
   if(response.ok) {
     response.json().then(data => {
@@ -17,11 +17,11 @@ fetch(api_url).then(response =>  {
       }
     });
   } else {
-    document.getElementById("file-loading").innerHTML = '<a href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/master/documents"><br>Network Error. clicker ici pour voir les fichiers</a>'
+    document.getElementById("file-loading").innerHTML = '<a href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/main/documents"><br>Network Error. clicker ici pour voir les fichiers</a>'
     alert("Network Error");
   }
 })
   .catch(function(error) {
-    document.getElementById("file-loading").innerHTML = '<a href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/master/documents"><br>Network Error. clicker ici pour voir les fichiers</a>'
+    document.getElementById("file-loading").innerHTML = '<a href="https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/tree/main/documents"><br>Network Error. clicker ici pour voir les fichiers</a>'
     alert("Network Error : " + error);
   });
