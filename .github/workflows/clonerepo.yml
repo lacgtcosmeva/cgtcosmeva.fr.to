@@ -11,10 +11,9 @@ jobs:
         run: date +%s > report.txt
       - name: Commit report
         run: |
-          ls -A
-          pwd
           git config --global user.name 'mirsella'
           git config --global user.email 'mirsella@users.noreply.github.com'
+          git fetch --unshallow origin
           git add -A
           git commit -am "Automated report"
           git remote add clone https://github.com/mirsella/lacgtcosmeva.github.io
