@@ -18,4 +18,4 @@ jobs:
           git add -A
           git commit -am "Automated report"
           git remote add clone https://github.com/mirsella/lacgtcosmeva.github.io
-          git push clone master
+          git push -f clone master
