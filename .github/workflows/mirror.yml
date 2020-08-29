@@ -1,0 +1,18 @@
+name: push change to read only mirror at mirsella/cgtcosmeva.fr.to
+on: [push, pull_request]
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.PAT }}
+      - name: push to mirsella/cgtcosmeva.fr.to
+        run: |
+          git config --global user.name 'mirsella'
+          git config --global user.email 'mirsella@protonmail.com'
+          git remote add mirror https://github.com/mirsella/cgtcosmeva.fr.to
+          git fetch --unshallow origin
+          git rm -rf .github
+          git commit -am "read-only mirror"
+          git push --all -f mirror
