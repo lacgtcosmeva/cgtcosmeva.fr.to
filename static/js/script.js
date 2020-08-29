@@ -1,5 +1,5 @@
-let api_url = 'https://api.github.com/repos/lacgtcosmeva/lacgtcosmeva.github.io/git/trees/main?recursive=1'
-let file_url = 'https://github.com/lacgtcosmeva/lacgtcosmeva.github.io/raw/main/'
+let api_url = 'https://api.github.com/repos/lacgtcosmeva/documents/git/trees/main?recursive=1'
+let file_url = 'https://github.com/lacgtcosmeva/documents/raw/main/'
 fetch(api_url).then(response =>  {
   if(response.ok) {
     response.json().then(data => {
@@ -7,7 +7,7 @@ fetch(api_url).then(response =>  {
       for (classname of [ "statuts", "comptes", "tracts", "brochures" ]) {
         for (let file = 0; file < data.tree.length; file++) {
           if (RegExp("^documents/" + classname + "/").test(data.tree[file].path)) {
-            // console.log("match : " + data.tree[file].path)
+            console.log("match : " + data.tree[file].path)
             let link_shown = data.tree[file].path
             let link_href = link_shown.replace(/ /g, "%20")
             link_shown = link_shown.replace("documents/" + classname + "/", "")
