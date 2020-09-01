@@ -187,6 +187,16 @@ footer > div {
 #footer-links-p { margin-left: 7px; }
 .footer-personne { margin-right: 40px; }
 
+@media only screen and (max-width: 1000px) {
+  footer {
+    display: inline;
+    zoom: 90%;
+  }
+  .fcontainer {
+    margin-bottom: 30px;
+  }
+}
+
 @media only screen and (max-width: 942px) {
   .site {
     flex-direction: column;
@@ -220,12 +230,5 @@ footer > div {
   }
   .topbar-nav {
     margin: 0 0 10px 0;
-  }
-  .footer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer > * {
-    margin: 10px 0;
   }
 }
