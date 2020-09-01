@@ -11,7 +11,7 @@ fetch(api_url).then(response =>  {
             let link_shown = data.tree[file].path
             let link_href = link_shown.replace(/ /g, "%20")
             link_shown = link_shown.replace("documents/" + classname + "/", "")
-            document.getElementsByClassName(classname)[0].innerHTML  += `<li><a href=${file_url}${link_href}>${link_shown}</a></li>`
+            document.getElementsByClassName(classname)[0].innerHTML  += `<li><a target="_blank" href=${file_url}${link_href}>${link_shown}</a></li>`
           }
         }
       }
