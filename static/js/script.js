@@ -4,7 +4,7 @@ fetch(api_url).then(response =>  {
   if(response.ok) {
     response.json().then(data => {
       document.getElementById("file-loading").innerHTML = ""
-      for (classname of [ "statuts", "comptes", "tracts", "brochures" ]) {
+      for (classname of [ "historique", "statuts", "comptes", "tracts", "brochures" ]) {
         for (let file = 0; file < data.tree.length; file++) {
           if (RegExp("^documents/" + classname + "/").test(data.tree[file].path)) {
             console.log("match : " + data.tree[file].path)
