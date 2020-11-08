@@ -11,7 +11,7 @@ try {
         document.getElementById("file-loading").innerHTML = ""
         for (classname of [ "historique", "statuts", "comptes", "tracts", "brochures" ]) {
           for (let file = 0; file < data.tree.length; file++) {
-            if (RegExp("^documents/" + classname + "/").test(data.tree[file].path) && data.tree[file].size) {
+            if (RegExp("^documents/" + classname + "/").test(data.tree[file].path) && data.tree[file].type == "blob") {
               console.log("match : " + data.tree[file].path)
               let link_shown = data.tree[file].path
               let link_href = link_shown.replace(/ /g, "%20")
