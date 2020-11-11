@@ -24,6 +24,9 @@ html, body {
   background: rgba(0, 0, 0, .02);
 }
 
+.hidden {
+  display: none;
+}
 a {
   color: inherit;
   text-decoration: underline;
@@ -69,6 +72,16 @@ ul {
   font-weight: 700;
   margin: 0;
   font-size: 1.5em;
+}
+
+#tracts-year {
+  margin-top: 10px;
+  font-size: 110%;
+  width: 70px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
 }
 
 .links {
