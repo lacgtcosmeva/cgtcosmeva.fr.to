@@ -7,10 +7,12 @@ function error() {
 }
 
 let tractsYear = document.getElementById("tracts-year")
+const currentYear = new Date().getFullYear()
+tractsYear.max = currentYear
 function changetracts() {
   if (tractsYear.value < 2015) {
     tractsYear.value = 2015
-  } else if (tractsYear > 2021) {
+  } else if (tractsYear > currentYear) {
     tractsYear.value = 2020
   }
   document.querySelectorAll(".tracts").forEach(e => {
