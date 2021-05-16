@@ -10,7 +10,7 @@ let tractsYear = document.getElementById("tracts-year")
 function changetracts() {
   if (tractsYear.value < 2015) {
     tractsYear.value = 2015
-  } else if (tractsYear < 2020) {
+  } else if (tractsYear > 2021) {
     tractsYear.value = 2020
   }
   document.querySelectorAll(".tracts").forEach(e => {
