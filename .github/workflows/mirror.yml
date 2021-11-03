@@ -11,7 +11,7 @@ jobs:
         run: |
           git config --global user.name 'mirsella'
           git config --global user.email 'mirsella@protonmail.com'
-          git remote add mirror https://github.com/mirsella/cgtcosmeva.fr.to
+          git remote add mirror git@github.com:mirsella/cgtcosmeva.fr.to
           git fetch --unshallow origin
           git rm -rf .github
           git commit -am "read-only mirror"
