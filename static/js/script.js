@@ -10,10 +10,10 @@ let tractsYear = document.getElementById("tracts-year")
 const currentYear = new Date().getFullYear()
 tractsYear.max = currentYear
 function changetracts() {
-  if (tractsYear.value < 2015) {
+  if (tractsYear.value < 2013) {
     tractsYear.value = 2015
-  } else if (tractsYear > currentYear) {
-    tractsYear.value = 2020
+  } else if (tractsYear > currentYear + 1) {
+    tractsYear.value = 2022
   }
   document.querySelectorAll(".tracts").forEach(e => {
     e.className += " hidden"
