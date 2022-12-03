@@ -76,7 +76,7 @@ ul {
 
 #tracts-year {
   margin-top: 10px;
-  font-size: 110%;
+  /* font-size: 110%; */
   width: 70px;
   border-top-style: hidden;
   border-right-style: hidden;
@@ -148,7 +148,7 @@ color: var(--primary);
   margin-right: 5px;
   width: 80%;
   padding-right: 20px;
-  max-height: 120px;
+  max-height: 150px;
   overflow-y: auto;
   overflow-x: auto;
 }
